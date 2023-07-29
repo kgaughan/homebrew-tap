@@ -5,43 +5,47 @@
 class Nibbled < Formula
   desc "A server for the Gopher protocol"
   homepage "https://github.com/kgaughan/nibbled"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kgaughan/nibbled/releases/download/v0.1.0/nibbled_0.1.0_darwin_x86_64.tar.gz"
-      sha256 "132d49462f989b8aa9d8ab9ffd7ba88651ab25e62a4b5710a94eafb58927153f"
+      url "https://github.com/kgaughan/nibbled/releases/download/v0.2.0/nibbled_0.2.0_darwin_x86_64.tar.gz"
+      sha256 "17755b61bf7e6c42c1d7e44c045bee706682a7a249841598a7b1f0828d0ff27c"
 
       def install
         bin.install "nibbled"
+        man1.install "nibbled.1"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kgaughan/nibbled/releases/download/v0.1.0/nibbled_0.1.0_darwin_arm64.tar.gz"
-      sha256 "8e9c0a5e05964794fa4e94a55c4b69bc1728b978422fdfde8f104d622239bdac"
+      url "https://github.com/kgaughan/nibbled/releases/download/v0.2.0/nibbled_0.2.0_darwin_arm64.tar.gz"
+      sha256 "922d4cfa2b5d1651e150a7b06ab5f133facbcb06e1f08c1de6a36a6ecf60febd"
 
       def install
         bin.install "nibbled"
+        man1.install "nibbled.1"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/kgaughan/nibbled/releases/download/v0.1.0/nibbled_0.1.0_linux_x86_64.tar.gz"
-      sha256 "c4bcd8d781d4e045bd2815455184a7b6f679f3110934280dfdb65d09e0db4797"
+      url "https://github.com/kgaughan/nibbled/releases/download/v0.2.0/nibbled_0.2.0_linux_x86_64.tar.gz"
+      sha256 "29cc451e7ba13b4ea619106b207bf2a48d22925a4a6207ea6acc457370bfb7a8"
 
       def install
         bin.install "nibbled"
+        man1.install "nibbled.1"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kgaughan/nibbled/releases/download/v0.1.0/nibbled_0.1.0_linux_arm64.tar.gz"
-      sha256 "cdcc93c2ad986ee52eebfd26ad987ef5750a959be63fc808dad473082554ea1e"
+      url "https://github.com/kgaughan/nibbled/releases/download/v0.2.0/nibbled_0.2.0_linux_arm64.tar.gz"
+      sha256 "91a37276b534c6fbc5635ad6d5dbb72fddf285f01399f71678b861478c329a2c"
 
       def install
         bin.install "nibbled"
+        man1.install "nibbled.1"
       end
     end
   end
