@@ -11,7 +11,7 @@ class PlanetMercury < Formula
   on_macos do
     on_intel do
       url "https://github.com/kgaughan/mercury/releases/download/v0.4.1/mercury_0.4.1_darwin_x86_64.tar.gz"
-      sha256 "62c5dd42ac72394feb6c38effbc0d068bacfff46c219df59640ce408f727e6a3"
+      sha256 "64dbaf253ab0ae7c2d337c391172110e26c50d01a1447680a1750a10545f50d3"
 
       def install
         bin.install "mercury"
@@ -19,7 +19,7 @@ class PlanetMercury < Formula
     end
     on_arm do
       url "https://github.com/kgaughan/mercury/releases/download/v0.4.1/mercury_0.4.1_darwin_arm64.tar.gz"
-      sha256 "bce56945257b51153a61922aba5f8a78ef6da4d96ab6f0a4a8e2f06ac03ffa6e"
+      sha256 "50da4e3c49787f642ad852032997648fa5fa499e7648d83d2aac17bd60adbe2d"
 
       def install
         bin.install "mercury"
@@ -31,7 +31,7 @@ class PlanetMercury < Formula
     on_intel do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/kgaughan/mercury/releases/download/v0.4.1/mercury_0.4.1_linux_x86_64.tar.gz"
-        sha256 "09ff3ec4abc0c0d95ea183582ee3a72a06b6c0d53490341e7977e1cafc511297"
+        sha256 "28da5d7ee1eaa91008082dee81c31d94db10117efde1f624b7dd655dac1700f4"
 
         def install
           bin.install "mercury"
@@ -41,7 +41,7 @@ class PlanetMercury < Formula
     on_arm do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/kgaughan/mercury/releases/download/v0.4.1/mercury_0.4.1_linux_arm64.tar.gz"
-        sha256 "d1b986a3b52e7102a787116325235d3b0c9b0f23503bf0b5470efe594cab3fc0"
+        sha256 "eefd9cc99b2aa112d33c0a251436dd63d98989dddb0e2770a65d6ecf122bae36"
 
         def install
           bin.install "mercury"
