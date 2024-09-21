@@ -5,21 +5,21 @@
 class PlanetMercury < Formula
   desc "A Planet-style feed aggregator"
   homepage "https://github.com/kgaughan/mercury"
-  version "0.4.3"
+  version "0.4.4"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/kgaughan/mercury/releases/download/v0.4.3/mercury_0.4.3_darwin_x86_64.tar.gz"
-      sha256 "2749302ba778d102b58eaa5208f5fde83670b628cdef8292ed09f6999ace21f5"
+      url "https://github.com/kgaughan/mercury/releases/download/v0.4.4/mercury_0.4.4_darwin_x86_64.tar.gz"
+      sha256 "1d867d70effb05a861570568d453f1ab6372c10d3e46fd57ec228526e2ac0ed2"
 
       def install
         bin.install "mercury"
       end
     end
     on_arm do
-      url "https://github.com/kgaughan/mercury/releases/download/v0.4.3/mercury_0.4.3_darwin_arm64.tar.gz"
-      sha256 "dbd3021fb8818a4619ed39f33418494c9f1657e758e1cc4deeab1dcde398db1f"
+      url "https://github.com/kgaughan/mercury/releases/download/v0.4.4/mercury_0.4.4_darwin_arm64.tar.gz"
+      sha256 "2545f749956c7da604a25aa4cc23930906bb0672ae7a474c66713f28acf8f5ac"
 
       def install
         bin.install "mercury"
@@ -30,8 +30,8 @@ class PlanetMercury < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/kgaughan/mercury/releases/download/v0.4.3/mercury_0.4.3_linux_x86_64.tar.gz"
-        sha256 "df45079f2d6a0f700a22b863b82eb62e1ca7409bb1a351e8c6caf80208db727e"
+        url "https://github.com/kgaughan/mercury/releases/download/v0.4.4/mercury_0.4.4_linux_x86_64.tar.gz"
+        sha256 "5fd83a983d0e260b6c7fa58cb6b2062789b764593feb2e2898b702568742cfbe"
 
         def install
           bin.install "mercury"
@@ -40,8 +40,8 @@ class PlanetMercury < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/kgaughan/mercury/releases/download/v0.4.3/mercury_0.4.3_linux_arm64.tar.gz"
-        sha256 "c3bb309fdc78a1fd37aebddc2a0ed68e5e06943b4a044a26fba1c057786e6ece"
+        url "https://github.com/kgaughan/mercury/releases/download/v0.4.4/mercury_0.4.4_linux_arm64.tar.gz"
+        sha256 "ee42926fc01cbf1b79953f510454471ea8b7d47f8590f83af61188d939e3fd3e"
 
         def install
           bin.install "mercury"
