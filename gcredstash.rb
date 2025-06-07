@@ -5,21 +5,21 @@
 class Gcredstash < Formula
   desc "Manages credentials using AWS Key Management Service (KMS) and DynamoDB"
   homepage "https://github.com/kgaughan/gcredstash"
-  version "0.5.4"
+  version "0.5.5"
   license "ASL 2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kgaughan/gcredstash/releases/download/v0.5.4/gcredstash_0.5.4_darwin_x86_64.tar.gz"
-      sha256 "fa5202725a87f1cdab86a9602776ebee6b43099804bb7f321a5fa05ca07d1e5e"
+      url "https://github.com/kgaughan/gcredstash/releases/download/v0.5.5/gcredstash_0.5.5_darwin_x86_64.tar.gz"
+      sha256 "2f0673cd33611a563eb1b0ce3b74305801a25dbac645801cfecf4586eb66cef4"
 
       def install
         bin.install "gcredstash"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kgaughan/gcredstash/releases/download/v0.5.4/gcredstash_0.5.4_darwin_arm64.tar.gz"
-      sha256 "c74ed7510bf78aca1f7609f82f6785df6ccefcb2cf10d14f3bdf15a681befcc7"
+      url "https://github.com/kgaughan/gcredstash/releases/download/v0.5.5/gcredstash_0.5.5_darwin_arm64.tar.gz"
+      sha256 "6cde66bddfd1207488f287f2a96b7a2f801b549eedf658c857ed1ba55576b3fb"
 
       def install
         bin.install "gcredstash"
@@ -28,24 +28,18 @@ class Gcredstash < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/kgaughan/gcredstash/releases/download/v0.5.4/gcredstash_0.5.4_linux_x86_64.tar.gz"
-        sha256 "2fbdf284b440937d105b542da988f10fd6e46982902a13eadb5741d0808f1ca0"
-
-        def install
-          bin.install "gcredstash"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/kgaughan/gcredstash/releases/download/v0.5.5/gcredstash_0.5.5_linux_x86_64.tar.gz"
+      sha256 "8f6247a7c734d47f96244d1377a5d3b2e2d51911be80ebfb1624b39ab0349b77"
+      def install
+        bin.install "gcredstash"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/kgaughan/gcredstash/releases/download/v0.5.4/gcredstash_0.5.4_linux_arm64.tar.gz"
-        sha256 "77074780b78edb3ec952871a00a5a9caee6541569907c475785bc8abd40e0512"
-
-        def install
-          bin.install "gcredstash"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/kgaughan/gcredstash/releases/download/v0.5.5/gcredstash_0.5.5_linux_arm64.tar.gz"
+      sha256 "4f2101c0c997d4c5dc64a78338c4298240e3cdde074ce5b1a9a85d16ae893eaa"
+      def install
+        bin.install "gcredstash"
       end
     end
   end
