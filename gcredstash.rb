@@ -9,4 +9,40 @@ class Gcredstash < Formula
   license "ASL 2.0"
 
   disable! date: "2025-08-31", because: "has been replaced with a cask", replacement_cask: "gcredstash"
+
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/kgaughan/gcredstash/releases/download/v0.5.6/gcredstash_0.5.6_darwin_x86_64.tar.gz"
+      sha256 "b4ad34e6a52c37f03080a94bcc82bc25dd212cfa83c04163cd71f13b1893cf80"
+
+      def install
+        bin.install "gcredstash"
+      end
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/kgaughan/gcredstash/releases/download/v0.5.6/gcredstash_0.5.6_darwin_arm64.tar.gz"
+      sha256 "ab9ed4fa661df074d757aafb57ccc7822be6b2db6607b204e5542caa6d5957d9"
+
+      def install
+        bin.install "gcredstash"
+      end
+    end
+  end
+
+  on_linux do
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/kgaughan/gcredstash/releases/download/v0.5.6/gcredstash_0.5.6_linux_x86_64.tar.gz"
+      sha256 "240c5c1a360a929b51ab49271551392ba97358e4ba8e1cc08590ef1415e884d8"
+      def install
+        bin.install "gcredstash"
+      end
+    end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/kgaughan/gcredstash/releases/download/v0.5.6/gcredstash_0.5.6_linux_arm64.tar.gz"
+      sha256 "d1891a4b09511d0343f2f872ebc12bfb8338d806fd97798e613615bcfe367e0e"
+      def install
+        bin.install "gcredstash"
+      end
+    end
+  end
 end

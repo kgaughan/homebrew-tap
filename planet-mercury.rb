@@ -9,4 +9,40 @@ class PlanetMercury < Formula
   license "MIT"
 
   disable! date: "2025-08-31", because: "has been replaced with a cask", replacement_cask: "planet-mercury"
+
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/kgaughan/mercury/releases/download/v0.4.8/mercury_0.4.8_darwin_x86_64.tar.gz"
+      sha256 "9177366fa6c3c992b7a377bd5bc39802cc4bdc11fa0f14cc18fdcd4f3ddcbdff"
+
+      def install
+        bin.install "mercury"
+      end
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/kgaughan/mercury/releases/download/v0.4.8/mercury_0.4.8_darwin_arm64.tar.gz"
+      sha256 "1894941f5e45bfce7cf195bc69499262a336f7904009adbe052c1f6645dae854"
+
+      def install
+        bin.install "mercury"
+      end
+    end
+  end
+
+  on_linux do
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/kgaughan/mercury/releases/download/v0.4.8/mercury_0.4.8_linux_x86_64.tar.gz"
+      sha256 "a7f3f5e413d0253df03690e4c486464ee38e57ff109bf7df5ca066757b94c526"
+      def install
+        bin.install "mercury"
+      end
+    end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/kgaughan/mercury/releases/download/v0.4.8/mercury_0.4.8_linux_arm64.tar.gz"
+      sha256 "93f55d3dc4d2d7bc07cdc221777807a05b6695130a89a4cd2fe0bd180b56ed90"
+      def install
+        bin.install "mercury"
+      end
+    end
+  end
 end
