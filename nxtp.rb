@@ -5,21 +5,21 @@
 class Nxtp < Formula
   desc " A Network neXt Time Protocol (NXTP) client and server"
   homepage "https://github.com/kgaughan/nxtp"
-  version "1.0.3"
+  version "1.0.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kgaughan/nxtp/releases/download/v1.0.3/nxtp_1.0.3_darwin_x86_64.tar.gz"
-      sha256 "c75ab48f576a8c52cc4b965e64af1a4a9116d81faf80a23be37b5b87d089358e"
+      url "https://github.com/kgaughan/nxtp/releases/download/v1.0.4/nxtp_1.0.4_darwin_x86_64.tar.gz"
+      sha256 "8a2b09c46682eb1e65be8ed110f789b1c69133dce3e0f91b126b93b3147f162a"
 
       def install
         bin.install "nxtp"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kgaughan/nxtp/releases/download/v1.0.3/nxtp_1.0.3_darwin_arm64.tar.gz"
-      sha256 "0e26186be4745b84c329a1bc491d9886af82f15fc39493944e5229c62215daca"
+      url "https://github.com/kgaughan/nxtp/releases/download/v1.0.4/nxtp_1.0.4_darwin_arm64.tar.gz"
+      sha256 "579f77acd9d21e82b672d7313a69c79b80b92b6e53f6a8ca189b3f8d769e5ad4"
 
       def install
         bin.install "nxtp"
@@ -28,24 +28,18 @@ class Nxtp < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/kgaughan/nxtp/releases/download/v1.0.3/nxtp_1.0.3_linux_x86_64.tar.gz"
-        sha256 "d0b59e9f59f80cc58bb921a76f511ed386cd5b20dc1e57610fa1d62fc51a5fcc"
-
-        def install
-          bin.install "nxtp"
-        end
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/kgaughan/nxtp/releases/download/v1.0.4/nxtp_1.0.4_linux_x86_64.tar.gz"
+      sha256 "bdac467ad8b3e29f20fba2d55160dc2519b62cee849c5e46d9dba30444e28802"
+      def install
+        bin.install "nxtp"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/kgaughan/nxtp/releases/download/v1.0.3/nxtp_1.0.3_linux_arm64.tar.gz"
-        sha256 "8e92b13d28920c311f2d1774ba1f872198a8e97679195cf4669caf7513a3c781"
-
-        def install
-          bin.install "nxtp"
-        end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/kgaughan/nxtp/releases/download/v1.0.4/nxtp_1.0.4_linux_arm64.tar.gz"
+      sha256 "2965ccc9f793fcda6d4618ca38e7f61e35a1d0d037279ac5fb55af371d1f7d27"
+      def install
+        bin.install "nxtp"
       end
     end
   end
