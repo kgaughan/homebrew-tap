@@ -14,22 +14,22 @@ cask "nxtp" do
   on_macos do
     on_intel do
       url "https://github.com/kgaughan/nxtp/releases/download/v#{version}/nxtp_#{version}_darwin_x86_64.tar.gz"
-      sha256 "c27bfadc9b0f4c68dcdccf8102be95cc8d52f1c179e88196c59c83d61530b0a8"
+      sha256 "151e8be4a27616f055a1b6522c8874311ce372c17dfc2c1a4e729a7515104970"
     end
     on_arm do
       url "https://github.com/kgaughan/nxtp/releases/download/v#{version}/nxtp_#{version}_darwin_arm64.tar.gz"
-      sha256 "dff09eeacf31dffec57853cedb85988ebe1ac9a0c8cd8e1d3b9d761d069185af"
+      sha256 "9901889d755bf31747f1571cebe00d642f05ad125b1f50325e63437829f620ee"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/kgaughan/nxtp/releases/download/v#{version}/nxtp_#{version}_linux_x86_64.tar.gz"
-      sha256 "067d0c877a657a809f86e89d5e93afe942dfa1f309cd78a57fa6c2ed3b356072"
+      sha256 "228707b39fbb604320f45562033c0d9be5c45b6a95f376d314edcea8e216ae87"
     end
     on_arm do
       url "https://github.com/kgaughan/nxtp/releases/download/v#{version}/nxtp_#{version}_linux_arm64.tar.gz"
-      sha256 "78703ec4d182d8564c4217653a9a2baa22c02b31ad2fb0b6685ee5a621a30d8d"
+      sha256 "b35c6767d04c57e3179fe07bf58af3903f1716206b82d92cdfe582361330223a"
     end
   end
 
