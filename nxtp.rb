@@ -8,6 +8,8 @@ class Nxtp < Formula
   version "1.0.4"
   license "MIT"
 
+  disable! date: "2025-11-09", because: "has been replaced with a cask", replacement_cask: "nxtp"
+
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/kgaughan/nxtp/releases/download/v1.0.4/nxtp_1.0.4_darwin_x86_64.tar.gz"
