@@ -3,7 +3,7 @@ cask "planet-mercury" do
   name "planet-mercury"
   desc "A Planet-style feed aggregator"
   homepage "https://github.com/kgaughan/mercury"
-  version "0.6.0"
+  version "0.6.1"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "planet-mercury" do
   on_macos do
     on_intel do
       url "https://github.com/kgaughan/mercury/releases/download/v#{version}/mercury_#{version}_darwin_x86_64.tar.gz"
-      sha256 "743b069f282d89feed0d812982fd893f5bb0f6608639e5482844cc7af5f2b76d"
+      sha256 "9ce5c637dc3924f35ac5c7d23e53b3a20989fe6316f990ac222b3e8bb9af9138"
     end
     on_arm do
       url "https://github.com/kgaughan/mercury/releases/download/v#{version}/mercury_#{version}_darwin_arm64.tar.gz"
-      sha256 "de0076e6a7917ee531b02899c6e769e193ff85d9480f2cc0b510a0045cfa5a4b"
+      sha256 "1762b936cc11ae061988aa7b376d1ee117a10df47d2633eab73bc11e24fc6a2f"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/kgaughan/mercury/releases/download/v#{version}/mercury_#{version}_linux_x86_64.tar.gz"
-      sha256 "192d703c640a5046128e74f38a697c1e6b8e8d0144c9a5d1e2cd963dc1540405"
+      sha256 "1f012eb6f920c57546b7a4f0e5c6ee0b7b6fbe38318560d18b7f6936811b543f"
     end
     on_arm do
       url "https://github.com/kgaughan/mercury/releases/download/v#{version}/mercury_#{version}_linux_arm64.tar.gz"
-      sha256 "6d8b1e33cbd6a1d1a8a3cdc70a0ad3e5ae197c04000611f9c609f31427e0bf46"
+      sha256 "54f959f2d72a22b26e16f7fcbc2cb8b24e9985688e5c67a31913f7357a1b1ec8"
     end
   end
 
