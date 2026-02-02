@@ -3,7 +3,7 @@ cask "gcredstash" do
   name "gcredstash"
   desc "Manages credentials using AWS Key Management Service (KMS) and DynamoDB"
   homepage "https://github.com/kgaughan/gcredstash"
-  version "0.6.4"
+  version "0.6.5"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "gcredstash" do
   on_macos do
     on_intel do
       url "https://github.com/kgaughan/gcredstash/releases/download/v#{version}/gcredstash_#{version}_darwin_x86_64.tar.gz"
-      sha256 "6738ff5fabb22b3299826b6d6b8454f8fd6fdf51a3a67f76728e3a909a33dd2e"
+      sha256 "7bc7781cd87b432e49d8c0cb1c77b57a4e32172b361aae80ac332fc6f9d271f6"
     end
     on_arm do
       url "https://github.com/kgaughan/gcredstash/releases/download/v#{version}/gcredstash_#{version}_darwin_arm64.tar.gz"
-      sha256 "357e55ed85397a33b8af9d4a004ea463f45b2f8e577befd37fd05400e1edabe8"
+      sha256 "a423819665e9be6e8abf8aedd937eccf7062fa7b073b9a500c21a2e12f49476a"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/kgaughan/gcredstash/releases/download/v#{version}/gcredstash_#{version}_linux_x86_64.tar.gz"
-      sha256 "353d12b08be36653ed7d6d7c37d08dd6f662e47be5e9d36a6379c413591bbebf"
+      sha256 "017f43586559744a349f17a6d0e8881cddd4752fc811c5c122f386ecb2511c16"
     end
     on_arm do
       url "https://github.com/kgaughan/gcredstash/releases/download/v#{version}/gcredstash_#{version}_linux_arm64.tar.gz"
-      sha256 "0c9e3d4c08b8a81bcdd463a7c49a8466109cc50c73377c86354ecb58c40c3e60"
+      sha256 "9c1e74207718c7c41fd6b5c82fe895c26fdaa67abba21b7b2ccf209818e20525"
     end
   end
 
