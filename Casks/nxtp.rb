@@ -12,7 +12,6 @@ cask "nxtp" do
       url "https://github.com/kgaughan/nxtp/releases/download/v#{version}/nxtp_#{version}_darwin_arm64.tar.gz"
     end
   end
-
   on_linux do
     on_intel do
       sha256 "162e8b7c25fc4c19ef56549c790ba66dd10e2fe6d34b25b03087533dafb040e7"
@@ -34,12 +33,11 @@ cask "nxtp" do
 
   binary "nxtp"
 
-  postflight do
-    if OS.mac?
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/nxtp"]
+  postflight_steps do
+    on_macos do
+      run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{staged_path}}/nxtp"]
     end
   end
 
   # No zap stanza required
-
 end

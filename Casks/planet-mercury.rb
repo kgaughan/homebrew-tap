@@ -12,7 +12,6 @@ cask "planet-mercury" do
       url "https://github.com/kgaughan/mercury/releases/download/v#{version}/mercury_#{version}_darwin_arm64.tar.gz"
     end
   end
-
   on_linux do
     on_intel do
       sha256 "821f9044fb2afed04960eaa8784a76176dab4e9a27fe7552bac78582a0448941"
@@ -34,12 +33,11 @@ cask "planet-mercury" do
 
   binary "planet-mercury"
 
-  postflight do
-    if OS.mac?
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/mercury"]
+  postflight_steps do
+    on_macos do
+      run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{staged_path}}/mercury"]
     end
   end
 
   # No zap stanza required
-
 end

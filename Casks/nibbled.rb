@@ -12,7 +12,6 @@ cask "nibbled" do
       url "https://github.com/kgaughan/nibbled/releases/download/v#{version}/nibbled_#{version}_darwin_arm64.tar.gz"
     end
   end
-
   on_linux do
     on_intel do
       sha256 "401f7bddd9d4c38e0d9c38b2975780c6d495ef421818a0c5549bd4295630b7ac"
@@ -35,12 +34,11 @@ cask "nibbled" do
   binary "nibbled"
   manpage "nibbled.1"
 
-  postflight do
-    if OS.mac?
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/nibbled"]
+  postflight_steps do
+    on_macos do
+      run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{staged_path}}/nibbled"]
     end
   end
 
   # No zap stanza required
-
 end
