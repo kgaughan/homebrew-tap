@@ -6,25 +6,25 @@ cask "gcredstash" do
     end
   end
 
-  version "0.6.16"
+  version "0.6.17"
 
   on_macos do
     on_arm do
-      sha256 "e5ad053cf4fa06c397c5b1eee06ac5ef59fbbe58ac8a7cb1abc5f00ac6cdaba0"
+      sha256 "07028301cefbf0531067ea3a2af2482aabb4fb201e60b9a85a4081ea7972377d"
       url "https://github.com/kgaughan/gcredstash/releases/download/v#{version}/gcredstash_#{version}_darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "05c81e4cf7600a8f00342e7125a55928d26945f7dfb2cae46dcd8019d599f499"
+      sha256 "3c331794058093bd8aa588aa2ad9bb4c9b8e4099c9ea0c045ec8d87a32f75ae1"
       url "https://github.com/kgaughan/gcredstash/releases/download/v#{version}/gcredstash_#{version}_darwin_x86_64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "b31b8c15751e1d312dda3f0451aad4c6c7fbb2bb96384658b4ce6e78a118b901"
+      sha256 "fff431de3991fe8156a0e6fd0331060c1a3b9d7879c0f01512b39781a86caef1"
       url "https://github.com/kgaughan/gcredstash/releases/download/v#{version}/gcredstash_#{version}_linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "47ccaec2c6aa94743838f1743083a684d054a00fac10b32479bff81015e645ac"
+      sha256 "dc7ee74c4972f4f0c67ed57dcf8812bb1452940fce64c8fa2c7e9f40c474f047"
       url "https://github.com/kgaughan/gcredstash/releases/download/v#{version}/gcredstash_#{version}_linux_x86_64.tar.gz"
     end
   end
