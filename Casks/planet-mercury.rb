@@ -6,25 +6,25 @@ cask "planet-mercury" do
     end
   end
 
-  version "0.7.1"
+  version "0.7.2"
 
   on_macos do
     on_arm do
-      sha256 "3c7c52a10fe3da0ed99c2115dedbc80917b4cd9c36452ae7664d0ac88fe59392"
+      sha256 "5c0ae84898fa0fcfc206b9a91298a6a3a29c63bcc320cebfa3f40ac955e39492"
       url "https://github.com/kgaughan/mercury/releases/download/v#{version}/mercury_#{version}_darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "d7a481669d10be18bce70cd2ba00a92fa45fd0ac3064df743da91cba3ff710e8"
+      sha256 "20217e3f663bb23710b74bc265939f4ab4c65022be9983ba8b4b627637840f23"
       url "https://github.com/kgaughan/mercury/releases/download/v#{version}/mercury_#{version}_darwin_x86_64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "2a99e20c6e454ce3d939445c9f08c7559f97458a41cfd5553115aa9996fe4fb3"
+      sha256 "1c29497e9c0a5e053fb6ddf0527f8d4dd22655b4216c5e633ab9034c8ea8b613"
       url "https://github.com/kgaughan/mercury/releases/download/v#{version}/mercury_#{version}_linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "19568cc0f131b66075459c95326fec2e3bb6a36de6dd7205509e3f9c33c9e401"
+      sha256 "90f3521fb5c1b2183aa3ba849c74deee497c46e0445e09879718995efbadfaa2"
       url "https://github.com/kgaughan/mercury/releases/download/v#{version}/mercury_#{version}_linux_x86_64.tar.gz"
     end
   end
